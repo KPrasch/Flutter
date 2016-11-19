@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<title>An HTML standard template</title>
+  	<meta charset="utf-8"  />
+  </head>
+
+  <body>
+
+       <p>Login</p>
+
+       <section id=errors>
+         {{ form.errors }}
+       </section>
+
+       <form action='' method='POST'>
+         {% csrf_token %}
+         {{ form.as_p }}
+         <input type='submit'>
+       </form>
+
+  </body>
+
+</html>

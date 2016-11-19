@@ -1,0 +1,6 @@
+__pycache__
+migrations
+*.pyc
+private
+secrets.py
+.idea

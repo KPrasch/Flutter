@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Flutter</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/timeline.css" %}">
+  </head>
+
+  <body>
+
+   {% if request.user.is_authenticated %}
+       Hello, {{ request.user }}.
+       <a href='/accounts/logout'> Get me out of here </a>
+   {% else %}
+       <a href="/accounts/login/"> Log me in! </a>
+   {% endif %}
+
+
+    <form action='/flutz/search/' method='GET'>
+      {{ form.as_p }}
+      <input type='submit' value='SEARCHNOW'>
+    </form>
+
+    <ul id='timeline'>
+      {% for flutt in flutts %}
+          <li>{{ flutt.body }}</li>
+          <li>{{ flutt.author }}</li>
+      {% endfor %}
+    </ul>
+
+  </body>
+
+</html>

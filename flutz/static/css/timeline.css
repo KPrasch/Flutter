@@ -1,0 +1,12 @@
+body {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background-color: lightgrey;
+}
+
+#timeline {
+    background-color: blue;
+
+}
