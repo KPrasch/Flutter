@@ -6,10 +6,11 @@
     <title>Flutter</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "css/timeline.css" %}">
+      <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}/favicon.ico/">
   </head>
 
   <body>
-
+   <img src = "{% static 'sick_logo.png' %}">
    {% if request.user.is_authenticated %}
        Hello, {{ request.user }}.
        <a href='/accounts/logout'> Get me out of here </a>
