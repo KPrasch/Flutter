@@ -1,5 +1,4 @@
 from __future__ import unicode_literals
-
 from django.db import models
 from django.contrib.auth.models import User
 from accounts.models import Member
@@ -21,9 +20,9 @@ class Flutt(models.Model):
         return result
 
     def __str__(self):
-        result = "{} {}".format( self.author, self.created)
+        result = "{} {}".format(self.author, self.created)
         return result
 
     def __repr__(self):
-        result = "{} {}".format( self.author, self.created)
+        result = "{} {}".format(self.author, self.created)
         return result
